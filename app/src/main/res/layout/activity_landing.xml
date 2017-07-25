@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dalaleen.Activities.SignupLogin"
+    android:background="@drawable/background">
+
+
+    <LinearLayout
+        android:layout_marginTop="170dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        >
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#ffffff"
+            android:text="DALALEEN"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:layout_marginTop="10dp"
+            android:textSize="10sp"
+            android:textColor="#ffffff"
+            android:text="NatusErrorSitVolupTatemoppAntium"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <com.dalaleen.custome_front.LatoRegular
+                android:textStyle="bold"
+                android:id="@+id/tv_log_in"
+                android:padding="15dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/log_in"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:background="@drawable/log_in_round_corner"
+                android:textAllCaps="false"/>
+            >
+            <com.dalaleen.custome_front.LatoRegular
+                android:id="@+id/tv_sign_up"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="5dp"
+                android:padding="15dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:background="@drawable/sign_up_rounded_corner"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:id="@+id/tv_skip"
+            android:layout_marginTop="20dp"
+            android:text="@string/skip"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        >
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/error_phone_no"
+            android:paddingTop="4dp"
+            android:text="@string/please_enter_phone_no."
+            android:textColor="#FE2E2E"/>
+
+        <EditText
+            android:textSize="16sp"
+            android:inputType="phone"
+            android:digits="0123456789+"
+            android:id="@+id/edit_phone_no"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/edit_name"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="@string/Enter_phone_number"
+            android:background="@drawable/edittext_rectangle"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/error_name"
+            android:paddingTop="4dp"
+            android:text="@string/please_enter_name"
+            android:textColor="#FE2E2E"/>
+
+        <EditText
+            android:textSize="18sp"
+            android:inputType="textCapSentences|textPersonName"
+            android:id="@+id/edit_name"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/edit_email"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="@string/enter_name"
+            android:background="@drawable/edittext_rectangle"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content" />
+
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/error_email"
+            android:paddingTop="4dp"
+            android:text="@string/please_enter_email_address"
+            android:textColor="#FE2E2E"/>
+
+        <EditText
+            android:textSize="18sp"
+            android:id="@+id/edit_email"
+            android:inputType="textEmailAddress|textCapSentences"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/edit_password"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="@string/enter_email_address"
+            android:background="@drawable/edittext_rectangle"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/error_password"
+            android:paddingTop="4dp"
+            android:text="@string/please_enter_password"
+            android:textColor="#FE2E2E"/>
+
+        <EditText
+            android:textSize="18sp"
+            android:inputType="textPassword|textCapSentences"
+            android:id="@+id/edit_password"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/edit_confirm_password"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="@string/enter_password"
+            android:background="@drawable/edittext_rectangle"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/error_confirm_password"
+            android:paddingTop="4dp"
+            android:text="@string/please_enter_confirm_password"
+            android:textColor="#FE2E2E"/>
+
+        <EditText
+            android:textSize="18sp"
+            android:inputType="textPassword|textCapSentences"
+            android:id="@+id/edit_confirm_password"
+            android:maxLines="1"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="@string/enter_confirm_password"
+            android:background="@drawable/edittext_rectangle"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:id="@+id/tv_sign_up"
+            android:layout_marginTop="40dp"
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:background="@drawable/sign_up_rounded_corner"
+            android:textAllCaps="false"/>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_sign_up"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <com.dalaleen.custome_front.LatoRegular
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:text="@string/back_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/log_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
+

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/IMG_Back"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                android:layout_height="wrap_content" />
+
+            <com.dalaleen.custome_front.LatoBoldTV
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:text="@string/title_wallet"
+                android:transitionName="Wallettitle"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="8"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="3"
+       >
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:src="@drawable/ic_wallet_black_menu_24px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.dalaleen.custome_front.LatoRegular
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wallet Balance"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <com.dalaleen.custome_front.LatoBoldTV
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 900"
+                android:transitionName="walletAmount"
+                android:textSize="35sp"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_view_add"
+                    android:src="@drawable/ic_add_circle_outline_black_24px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.dalaleen.custome_front.LatoRegular
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Balance"
+                    android:textColor="#5493F2"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_info_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/menu_text_color_untouch" />
+
+        <android.support.v7.widget.RecyclerView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:background="#EDEDED"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+               
+                
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+
+                        <ImageView
+                            android:id="@+id/arrow_up"
+                            android:src="@drawable/ic_arrow_upward_black_24px"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                        <LinearLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/arrow_up"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.dalaleen.custome_front.LatoBoldTV
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Post Property"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"/>
+
+                            <com.dalaleen.custome_front.LatoBoldTV
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Order Number #12345HG89OKL"
+                                android:textSize="10sp"
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.dalaleen.custome_front.LatoBoldTV
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="500 IQU"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"/>
+
+                            <com.dalaleen.custome_front.LatoBoldTV
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7 April 2017"
+                                android:textSize="10sp"
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/menu_text_color_untouch" />
+
+
+                <LinearLayout
+                    android:background="#ffffff"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+
+                        <ImageView
+                            android:id="@+id/arrow_down"
+                            android:src="@drawable/ic_arrow_downward_black_24px"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                        <LinearLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/arrow_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.dalaleen.custome_front.LatoBoldTV
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Post Property"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"/>
+
+                            <com.dalaleen.custome_front.LatoBoldTV
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Order Number #12345HG89OKL"
+                                android:textSize="10sp"
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.dalaleen.custome_front.LatoBoldTV
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="500 IQU"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"/>
+
+                            <com.dalaleen.custome_front.LatoBoldTV
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7 April 2017"
+                                android:textSize="10sp"
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                
+                
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="70dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout android:layout_marginTop="30dp"
+    android:layout_marginLeft="20dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            >
+            <com.dalaleen.custome_front.LatoBoldTV
+                android:layout_weight="2"
+                android:id="@+id/TXT_PropertyName"
+                android:layout_width="0dp"
+                android:transitionName="P_name"
+                android:layout_height="wrap_content"
+                android:text="Contrary to popular belief,Ipsum is not simply"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical">
+
+
+                <com.dalaleen.custome_front.LatoRegular
+                    android:id="@+id/tv_status"
+                    android:padding="10dp"
+                    android:background="#E8532B"
+                    android:text="Sale"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:src="@drawable/ic_location_on_red_24dp"
+                android:layout_width="14dp"
+                android:layout_height="14dp" />
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:textSize="14sp"
+                android:id="@+id/Prop_Location"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14/A, Arabinda saroni,mathapara,Bahgdad"/>
+
+        </LinearLayout>
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"/>
+
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:layout_marginTop="10dp"
+            android:id="@+id/TXT_Price"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IQD 25,000"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/menu_text_color_untouch" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <com.dalaleen.custome_front.LatoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/catagory"
+                    android:textSize="14sp"/>
+
+                <com.dalaleen.custome_front.LatoBoldTV
+                    android:id="@+id/TXT_catagory"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Residence"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="70dp"
+                android:background="@color/menu_text_color_untouch" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <com.dalaleen.custome_front.LatoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subcat"
+                    android:textSize="14sp"/>
+
+                <com.dalaleen.custome_front.LatoBoldTV
+                    android:id="@+id/TXT_subcat"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="House"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/menu_text_color_untouch" />
+
+
+
+        <LinearLayout
+            android:id="@+id/LL_Info"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"></LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

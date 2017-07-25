@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.dalaleen.custome_front.LatoRegular
+        android:id="@+id/tv_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#585F68"
+        android:text="Next"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+
+    <ScrollView
+        android:layout_margin="20dp"
+        android:layout_above="@+id/tv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Propery Details"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"/>
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Propery for"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"/>
+
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/radioGroup"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rent"
+                    android:paddingLeft="10dp"
+                    android:button="@drawable/custom_radio_selector"
+                    android:id="@+id/radioButtonRent"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="true"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sale"
+                    android:paddingLeft="10dp"
+                    android:button="@drawable/custom_radio_selector"
+                    android:id="@+id/radioButtonSale"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:textSize="14sp"
+                    />
+            </RadioGroup>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:id="@+id/error_name"
+                android:paddingTop="4dp"
+                android:text="Please enter name"
+                android:textColor="#FE2E2E"/>
+            <EditText
+                android:textSize="16sp"
+                android:id="@+id/edit_name"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/edit_category"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Enter Name"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:background="@null"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:id="@+id/error_category"
+                android:paddingTop="4dp"
+                android:text="Please enter category"
+                android:textColor="#FE2E2E"/>
+            <EditText
+                android:textSize="16sp"
+                android:id="@+id/edit_category"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/sub_category"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Enter Category"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:background="@null"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sub Category"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:id="@+id/error_sub_category"
+                android:paddingTop="4dp"
+                android:text="Please enter category"
+                android:textColor="#FE2E2E"/>
+            <EditText
+                android:textSize="16sp"
+                android:id="@+id/edit_sub_category"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Enter Sub Category"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:background="@null"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_country"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Propert Description"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:id="@+id/error_property_description"
+                android:paddingTop="4dp"
+                android:text="Please property description"
+                android:textColor="#FE2E2E"/>
+            <EditText
+                android:textSize="16sp"
+                android:id="@+id/edit_property_description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:background="@null"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Addresss"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:id="@+id/error_address"
+                android:paddingTop="4dp"
+                android:text="Please enter address"
+                android:textColor="#FE2E2E"/>
+            <EditText
+                android:textSize="16sp"
+                android:id="@+id/edit_address"
+                android:maxLines="3"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Enter Address"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

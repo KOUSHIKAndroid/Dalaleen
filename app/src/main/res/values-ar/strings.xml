@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dalaleen</string>
+    <string name="sign_up">سجل</string>
+    <string name="back_to">ارجع الى</string>
+    <string name="enter_password">أدخل كلمة المرور</string>
+    <string name="please_enter_phone_no.">الرجاء إدخال رقم الهاتف</string>
+    <string name="Enter_phone_number">أدخل رقم الهاتف</string>
+    <string name="enter_name">أدخل الاسم</string>
+    <string name="please_enter_name">الرجاء إدخال الاسم</string>
+    <string name="please_enter_password">الرجاء إدخال كلمة المرور</string>
+    <string name="skip">تخطى</string>
+    <string name="log_in">تسجيل الدخول</string>
+    <string name="sign_up_now">أفتح حساب الأن</string>
+    <string name="do_not_have_an_account">ليس لديك حساب؟</string>
+    <string name="owner">صاحب</string>
+    <string name="agent">وكيل</string>
+    <string name="enter_email_address">أدخل عنوان البريد الالكتروني</string>
+    <string name="please_enter_email_address">الرجاء إدخال عنوان البريد الإلكتروني</string>
+    <string name="enter_confirm_password">أدخل تأكيد كلمة المرور</string>
+    <string name="please_enter_confirm_password">الرجاء إدخال تأكيد كلمة المرور</string>
+    <string name="enter_valid_email_address">أدخل عنوان بريد إلكتروني صالح</string>
+</resources>

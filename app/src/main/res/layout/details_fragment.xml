@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    >
+
+
+
+
+
+
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:layout_marginTop="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/description"
+            android:textSize="14sp"/>
+
+        <com.dalaleen.custome_front.LatoLightTV
+            android:id="@+id/TXT_Description"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The idea of “Selling” is something that scares a lot of people out of real estate. I used to hate the idea of being a “real estate salesman” because of all the negative connotations that went along with it (in my mind, anyway). When I finally came to the realization that selling is a MUST for any successful real estate investor – I had to start facing the issue head on, rather than running from it.fggg"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            />
+
+      </LinearLayout>

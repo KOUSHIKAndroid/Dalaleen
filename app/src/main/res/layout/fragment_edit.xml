@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear_show_status"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/linear_first_view"
+                android:orientation="horizontal"
+                android:background="#F0A81B"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_second_view"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_third_view"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"></LinearLayout>
+
+
+        </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:layout_below="@id/linear_show_status"
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_network_check_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/img_network_network_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wifi_off"/>
+        <com.dalaleen.custome_front.LatoRegular
+            android:id="@+id/network_check_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="no network connection"
+            android:textColor="#98333333"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_explore"
+        android:icon="@drawable/ic_browse_white_menu_24dp"
+        android:title="@string/text_buttom_explore"
+        />
+    <item
+        android:id="@+id/action_nearby"
+        android:icon="@drawable/ic_location_white_24dp"
+        android:title="@string/text_buttom_neareby"
+         />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="@string/text_buttom_search"
+        />
+
+    <item
+        android:id="@+id/action_addproperty"
+        android:icon="@drawable/ic_edit_white_24dp"
+        android:title="@string/text_buttom_add_p"
+         />
+</menu>

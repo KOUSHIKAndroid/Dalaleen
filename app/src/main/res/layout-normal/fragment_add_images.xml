@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.dalaleen.custome_front.LatoRegular
+        android:id="@+id/tv_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#585F68"
+        android:text="Next"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <ScrollView
+        android:layout_margin="20dp"
+        android:layout_above="@+id/tv_bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Images"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.dalaleen.custome_front.LatoRegular
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Images"
+                            android:layout_marginTop="20dp"
+                            android:textSize="14sp"/>
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_add_circle_outline_black_24px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/menu_text_color_untouch" />
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.dalaleen.custome_front.LatoRegular
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Drawings"
+                            android:layout_marginTop="20dp"
+                            android:textSize="14sp"/>
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_add_circle_outline_black_24px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                        <ImageView
+                            android:background="#D7D7D7"
+                            android:layout_margin="5dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

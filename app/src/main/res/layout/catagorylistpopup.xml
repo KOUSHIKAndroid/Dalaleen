@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:id="@+id/POP_TITLE"
+            android:text="@string/catagory"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="54dp" />
+        <ImageView
+            android:id="@+id/IMG_close"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_close_dark"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="54dp" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/LIST_catgory"
+            android:layout_below="@+id/POP_TITLE"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

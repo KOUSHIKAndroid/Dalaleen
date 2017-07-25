@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/IMG_icon"
+        android:layout_width="54dp"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        android:layout_height="54dp" />
+    <com.dalaleen.custome_front.LatoLightTV
+       android:id="@+id/TXT_ITEM"
+        android:layout_toRightOf="@+id/IMG_icon"
+        android:layout_width="match_parent"
+        android:padding="3dp"
+        android:gravity="center_vertical"
+        android:layout_height="54dp" />
+    <View
+        android:layout_below="@+id/TXT_ITEM"
+        android:layout_marginLeft="80dp"
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        android:layout_height="1px"/>
+
+
+</RelativeLayout>

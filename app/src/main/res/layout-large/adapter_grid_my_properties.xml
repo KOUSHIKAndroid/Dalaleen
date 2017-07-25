@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_view_background"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#886062"
+        />
+
+    <com.dalaleen.custome_front.LatoRegular
+        android:id="@+id/tv_status"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="50dp"
+        android:background="#E8532B"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Sale"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/LL_R"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="The Crest-Harse Macro"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:id="@+id/tv_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:text="J.N.Marg"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LL_R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:id="@+id/tv_iqu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="IQU 25,0000"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.dalaleen.custome_front.LatoRegular
+            android:id="@+id/tv_sqrft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:text="Price"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>

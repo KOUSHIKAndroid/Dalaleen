@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5493F2</color>
+    <color name="colorPrimaryDark">#5493F2</color>
+    <color name="colorAccent">#5493F2</color>
+
+    <color name="sign_up_common_border_color">#ffffff</color>
+    <color name="log_in_common_border_color">#5493F2</color>
+
+    <color name="darkBlue">#2A6EFF</color>
+    <color name="blue">#5493F2</color>
+
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="defaulthint">#9B9B9B</color>
+
+    <color name="pannel_color_untouch">#585F68</color>
+
+    <color name="menu_text_color_untouch">#D4D7D9</color>
+    <color name="menu_text_color_ontouch">#ffffff</color>
+
+    <color name="menu_background_color_ontouch">#687280</color>
+
+    <color name="menu_icon_color_untouch">#D4D7D9</color>
+    <color name="menu_icon_color_ontouch">#116AFF</color>
+
+    <color name="transparent">#00000000</color>
+
+</resources>

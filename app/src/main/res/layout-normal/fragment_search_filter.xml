@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/border_surround_linear_layout">
+
+            <ImageView
+                android:padding="10dp"
+                android:src="@drawable/ic_search_advance_search_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:id="@+id/edit_search"
+                android:maxLines="1"
+                android:hint="Key word to search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#8E8D8F"
+                android:background="@android:color/transparent"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="@color/menu_text_color_untouch" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/RLCategory"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:id="@+id/TXT_catagory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="@string/catagory"
+                android:textSize="16sp"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black" />
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/menu_text_color_untouch" />
+
+        <RelativeLayout
+            android:id="@+id/RLSearchByLocation"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="@string/searchbylocation"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/menu_text_color_untouch" />
+
+
+        <RelativeLayout
+            android:id="@+id/RLspinner_types_of_properties"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_types_of_properties"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:hint="Category"
+                android:paddingLeft="4dp"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="@color/menu_text_color_untouch" />
+
+
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:text="@string/lbl_noofbedroom"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/menu_text_color_untouch" />
+
+        <HorizontalScrollView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:id="@+id/linear_layout_number_of_bedrooms"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="@color/menu_text_color_untouch" />
+
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="Set Budget"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/menu_text_color_untouch" />
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/linear_layout_seek_bar_budget"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="@color/menu_text_color_untouch" />
+
+
+        <com.dalaleen.custome_front.LatoBoldTV
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="Set Size"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/menu_text_color_untouch" />
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:textSize="14sp"
+                android:text="min"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:textSize="14sp"
+                android:text="max"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/linear_layout_seek_bar_size"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:text="@string/search"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</ScrollView>

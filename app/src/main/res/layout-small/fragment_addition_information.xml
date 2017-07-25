@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.dalaleen.custome_front.LatoRegular
+        android:id="@+id/tv_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#585F68"
+        android:text="Submit"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+
+    <ScrollView
+        android:layout_margin="20dp"
+        android:layout_above="@+id/tv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional Information"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"/>
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Area"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_all_area"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_all_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Building Area"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_building_area"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_building_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="14sp"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Garden Area"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_garden_area"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_garden_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Front Length"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_front_length"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_front_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Depth Length"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_depth_length"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_depth_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_country"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of room in 1st floor"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_number_of_room_in_1st_floor"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_number_of_room_in_1st_floor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of room in 2nd floor"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_number_of_room_in_2nd_floor"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_number_of_room_in_2nd_floor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/menu_text_color_untouch" />
+
+
+            <com.dalaleen.custome_front.LatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kitchen"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:id="@+id/RLspinner_kitchen"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_kitchen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="Country"
+                    android:paddingLeft="2dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_keyboard_arrow_down_24px"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

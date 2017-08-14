@@ -33,7 +33,8 @@ public class ApplicationClass extends Application {
     public static final String TWITTER_KEY = "63fPQGziHO1G5QVXcRvNUaUZZ";
     public static final String TWITTER_SECRET = "FFycTD82OKpNM5ocLVQwW47tVDzs6LvrzpUULRCeXjumoDa5ha";
 
-    public static final String LanguageCode="ar";
+//    public static final String LanguageCode="ar";
+    public static final String LanguageCode="en";
 
     public String countryCode="";
     private static ApplicationClass instance=null;

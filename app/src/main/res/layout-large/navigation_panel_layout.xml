@@ -89,7 +89,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="Add Property"
+                    android:paddingRight="10dp"
+                    android:text="@string/Addproperty"
                     android:textColor="@color/menu_text_color_untouch"
                     android:textSize="16sp" />
 
@@ -111,7 +112,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="Browse"
+                    android:paddingRight="10dp"
+                    android:text="@string/Browse"
                     android:textColor="@color/menu_text_color_untouch"
                     android:textSize="16sp" />
 
@@ -134,6 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:transitionName="Wallettitle"
                     android:text="@string/title_wallet"
                     android:textColor="@color/menu_text_color_untouch"
@@ -165,7 +168,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="Near by"
+                    android:paddingRight="10dp"
+                    android:text="@string/title_nearby"
                     android:textColor="@color/menu_text_color_untouch"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -184,6 +188,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:text="@string/title_adv_search"
                     android:textColor="@color/menu_text_color_untouch"
                     android:textSize="16sp" />
@@ -206,7 +211,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="Post Property"
+                    android:text="@string/Post_property"
+                    android:paddingRight="10dp"
                     android:textColor="@color/menu_text_color_untouch"
                     android:textSize="16sp" />
 
@@ -229,7 +235,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="My Properties"
+                    android:paddingRight="10dp"
+                    android:text="@string/MyProperty"
                     android:textColor="@color/menu_text_color_untouch"
                     android:textSize="16sp" />
 
@@ -251,7 +258,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="My Favorites"
+                    android:paddingRight="10dp"
+                    android:text="@string/myFavorites"
                     android:textColor="@color/menu_text_color_untouch"
                     android:textSize="16sp" />
 
@@ -271,7 +279,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="My Saved Members"
+                    android:paddingRight="10dp"
+                    android:text="@string/MySaveedmember"
                     android:textColor="@color/menu_text_color_untouch"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -293,7 +302,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="Log out"
+                    android:paddingRight="10dp"
+                    android:text="@string/Logout"
                     android:textColor="@color/menu_text_color_untouch"
                     android:textSize="16sp" />
             </LinearLayout>

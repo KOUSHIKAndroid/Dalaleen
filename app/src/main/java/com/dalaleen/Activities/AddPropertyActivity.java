@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import com.dalaleen.R;
@@ -15,7 +16,7 @@ import com.dalaleen.fragments.PropertyDetailsFragment;
 
 import java.util.LinkedList;
 
-public class AddPropertyActivity extends AppCompatActivity {
+public class AddPropertyActivity extends AppCompatActivity implements View.OnClickListener{
     ViewPager view_pager;
     LinkedList<Fragment> fragmentList;
     LinearLayout linear_first_view,linear_second_view,linear_third_view;
@@ -83,6 +84,15 @@ public class AddPropertyActivity extends AppCompatActivity {
             view_pager.setCurrentItem(1, true);
         } else if (view_pager.getCurrentItem() == 1) {
             view_pager.setCurrentItem(2, true);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.back2:
+                onBackPressed();
+                break;
         }
     }
 }

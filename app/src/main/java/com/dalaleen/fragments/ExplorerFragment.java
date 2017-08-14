@@ -9,7 +9,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.dalaleen.Activities.BaseActivity;
 import com.dalaleen.CustomView.LoadingImageView;
@@ -35,9 +39,9 @@ import java.util.ArrayList;
  * Created by su on 3/30/17.
  */
 
-public class ExplorerFragment extends Fragment {
+public class ExplorerFragment extends Fragment implements View.OnClickListener{
     String checkingTAG;
-    EditTextLatoRegular edit_search;
+    EditText edit_search;
     RecyclerView REC_HOTLIST,REC_FEATURELIST;
     ArrayList<MyProperties> FeatureList;
     ArrayList<MyProperties> HotList;
@@ -50,6 +54,11 @@ public class ExplorerFragment extends Fragment {
         return frag_;
     }
 
+    ImageView IMG_Up_Arrow;
+    RelativeLayout RL_MAIN,RL_Edit_Main;
+    LinearLayout LL_TOP_1,LL_TOP_2;
+    LatoRegular TXT_MAIN_Category;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -60,6 +69,23 @@ public class ExplorerFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
+        IMG_Up_Arrow=(ImageView)view.findViewById(R.id.IMG_Up_Arrow);
+        IMG_Up_Arrow.setVisibility(View.GONE);
+        IMG_Up_Arrow.setOnClickListener(this);
+        RL_MAIN=(RelativeLayout)view.findViewById(R.id.RL_MAIN);
+        RL_MAIN.setOnClickListener(this);
+        RL_Edit_Main=(RelativeLayout)view.findViewById(R.id.RL_Edit_Main);
+        RL_Edit_Main.setVisibility(View.GONE);
+
+        LL_TOP_1=(LinearLayout)view.findViewById(R.id.LL_TOP_1);
+        LL_TOP_1.setVisibility(View.GONE);
+        LL_TOP_2=(LinearLayout)view.findViewById(R.id.LL_TOP_2);
+        LL_TOP_2.setVisibility(View.GONE);
+
+        TXT_MAIN_Category=(LatoRegular)view.findViewById(R.id.TXT_MAIN_Category);
+        TXT_MAIN_Category.setOnClickListener(this);
 
 
 
@@ -87,7 +113,7 @@ public class ExplorerFragment extends Fragment {
 
             LoadHOTProperties(0);
             LoadFEATUREProperties(0);
-            edit_search= (EditTextLatoRegular)view.findViewById(R.id.edit_search);
+            edit_search= (EditText) view.findViewById(R.id.edit_search);
             view.findViewById(R.id.img_clear).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -247,6 +273,28 @@ public class ExplorerFragment extends Fragment {
         tv_place.startLoading();
 
         LL_LOADER_FEATURE.addView(itemView);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.RL_MAIN:
+                IMG_Up_Arrow.setVisibility(View.VISIBLE);
+                RL_MAIN.setVisibility(View.GONE);
+                RL_Edit_Main.setVisibility(View.VISIBLE);
+                LL_TOP_1.setVisibility(View.VISIBLE);
+                LL_TOP_2.setVisibility(View.VISIBLE);
+                break;
+            case R.id.IMG_Up_Arrow:
+                LL_TOP_2.setVisibility(View.GONE);
+                LL_TOP_1.setVisibility(View.GONE);
+                RL_Edit_Main.setVisibility(View.GONE);
+                RL_MAIN.setVisibility(View.VISIBLE);
+                IMG_Up_Arrow.setVisibility(View.GONE);
+                break;
+        }
 
     }
 }

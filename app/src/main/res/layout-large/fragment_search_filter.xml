@@ -30,7 +30,7 @@
                 android:padding="10dp"
                 android:id="@+id/edit_search"
                 android:maxLines="1"
-                android:hint="Key word to search"
+                android:hint="@string/Keywordtosearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#8E8D8F"
@@ -49,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             >
 
             <android.support.v7.widget.AppCompatSpinner
@@ -65,7 +66,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/ic_keyboard_arrow_down_24px"/>
@@ -88,7 +89,7 @@
             <com.dalaleen.custome_front.LatoBoldTV
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Search by location"
+                android:text="@string/searchbylocation"
                 android:textSize="18sp"
                 android:gravity="center_vertical"
                 android:textColor="@color/black"/>
@@ -96,7 +97,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/ic_keyboard_arrow_down_24px"/>
@@ -113,6 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             >
 
             <android.support.v7.widget.AppCompatSpinner
@@ -120,7 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/transparent"
-                android:hint="Category"
+                android:hint="@string/catagory"
                 android:paddingLeft="2dp"
                 android:spinnerMode="dropdown"
                 android:textSize="18sp"
@@ -129,7 +131,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/ic_keyboard_arrow_down_24px"/>
@@ -148,7 +150,7 @@
             android:textSize="16sp"
             android:textColor="@color/black"
             android:gravity="center_vertical"
-            android:text="Number Of Bedroom"
+            android:text="@string/lbl_noofbedroom"
             android:layout_width="match_parent"
             android:layout_height="80dp" />
 
@@ -189,7 +191,7 @@
             android:gravity="center_vertical"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:text="Set Budget"
+            android:text="@string/setbudgete"
             android:layout_width="match_parent"
             android:layout_height="80dp" />
 
@@ -208,17 +210,18 @@
             <com.dalaleen.custome_front.LatoBoldTV
                 android:textSize="16sp"
                 android:textColor="@color/black"
-                android:text="min"
+                android:text="@string/min"
+                android:layout_alignParentStart="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <com.dalaleen.custome_front.LatoBoldTV
                 android:textSize="16sp"
                 android:textColor="@color/black"
-                android:text="max"
+                android:text="@string/max"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"/>
+                android:layout_alignParentEnd="true"/>
         </RelativeLayout>
 
         <LinearLayout
@@ -241,7 +244,7 @@
             android:gravity="center_vertical"
             android:textSize="18sp"
             android:textColor="@color/black"
-            android:text="Set Size"
+            android:text="@string/setsize"
             android:layout_width="match_parent"
             android:layout_height="80dp" />
 
@@ -259,18 +262,19 @@
 
             <com.dalaleen.custome_front.LatoBoldTV
                 android:textSize="16sp"
-                android:text="min"
+                android:text="@string/min"
+                android:layout_alignParentStart="true"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <com.dalaleen.custome_front.LatoBoldTV
                 android:textSize="16sp"
-                android:text="max"
+                android:text="@string/max"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"/>
+                android:layout_alignParentEnd="true"/>
         </RelativeLayout>
 
         <LinearLayout

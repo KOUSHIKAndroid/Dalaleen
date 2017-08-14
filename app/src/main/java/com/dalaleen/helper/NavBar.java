@@ -3,6 +3,7 @@ package com.dalaleen.helper;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -10,6 +11,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.util.Pair;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,6 +30,7 @@ import com.dalaleen.custome_front.RobotoRegular;
 import com.dalaleen.fragments.EditFragment;
 import com.dalaleen.fragments.ExplorerFragment;
 import com.dalaleen.fragments.NearByFragment;
+import com.dalaleen.logger.Logger;
 
 
 /**
@@ -53,14 +56,30 @@ public class NavBar implements NavigationView.OnNavigationItemSelectedListener{
             @Override
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
-                if(drawer.isDrawerOpen(Gravity.LEFT))
+
+
+                if(ApplicationClass.getInstance().LanguageCode.equals("ar"))
                 {
-                    drawer.closeDrawer(Gravity.LEFT);
+                    if(drawer.isDrawerOpen(Gravity.RIGHT))
+                    {
+                        drawer.closeDrawer(Gravity.RIGHT);
+                    }
+                    else
+                    {
+                        drawer.openDrawer(Gravity.RIGHT);
+                    }
+                }else {
+                    if(drawer.isDrawerOpen(Gravity.LEFT))
+                    {
+                        drawer.closeDrawer(Gravity.LEFT);
+                    }
+                    else
+                    {
+                        drawer.openDrawer(Gravity.LEFT);
+                    }
                 }
-                else
-                {
-                    drawer.openDrawer(Gravity.LEFT);
-                }
+
+
             }
         });
 

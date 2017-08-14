@@ -52,7 +52,7 @@
     <string name="title_adv_search">Advance Search</string>
     <string name="search">Search</string>
     <string name="title_explore">Explore</string>
-    <string name="title_nearby">Nearby</string>
+    <string name="title_nearby">Near by</string>
     <string name="searchbylocation">Search by location</string>
     <string name="catagory">Category</string>
     <string name="lbl_noofbedroom">Number Of Bedroom</string>
@@ -62,5 +62,17 @@
     <string name="Addproperty">Add Property</string>
     <string name="subcat">Sub category</string>
     <string name="description">DESCRIPTION</string>
+    <string name="Explore">Explore</string>
+    <string name="Browse">Browse</string>
+    <string name="Post_property">Post Property</string>
+    <string name="MyProperty">My Properties</string>
+    <string name="myFavorites">My Favorites</string>
+    <string name="MySaveedmember">My Saved Members</string>
+    <string name="Logout">Log out</string>
+    <string name="max">Max</string>
+    <string name="min">Min</string>
+    <string name="setsize">Set Size</string>
+    <string name="setbudgete">Set Budget</string>
+    <string name="Keywordtosearch">Key word to search</string>
 
 </resources>

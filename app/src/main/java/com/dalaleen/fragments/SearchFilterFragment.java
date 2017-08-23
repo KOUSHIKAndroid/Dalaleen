@@ -25,7 +25,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dalaleen.Activities.BaseActivity;
@@ -35,7 +34,7 @@ import com.dalaleen.Activities.TakePlaceActivity;
 import com.dalaleen.adapters.CatagoryPopupAdapter;
 import com.dalaleen.custome_front.LatoBoldTV;
 import com.dalaleen.custome_front.LatoRegular;
-import com.dalaleen.helper.ConstantClass;
+import com.dalaleen.helper.ApiConstant;
 import com.dalaleen.Interface.CustomAsynctask;
 import com.dalaleen.helper.RangeSeekBar;
 import com.dalaleen.logger.Logger;
@@ -152,7 +151,7 @@ public class SearchFilterFragment extends Fragment  {
         ///////////////////////////////////////////////////////////
 
 
-        customAsynctask.getResultListenerFromAsynctaskForGet(ConstantClass.BASE_URL + "/App_control/category_lists", new CustomAsynctask.onAPIResponse() {
+        customAsynctask.getResultListenerFromAsynctaskForGet(ApiConstant.BASE_URL + "/App_control/category_lists", new CustomAsynctask.onAPIResponse() {
             @Override
             public void onSuccess(String result) {
                 try {
@@ -314,7 +313,7 @@ public class SearchFilterFragment extends Fragment  {
     public void setCatagory(Catagory catagory) {
         TXT_catagory.setText(catagory.getTitle_eng());
         Dialogs.dismiss();
-        String  url=""+ ConstantClass.BASE_URL+""+"/App_control/provide_category_details?parent_category="+catagory.getParent_category()+"&lang=en";
+        String  url=""+ ApiConstant.BASE_URL+""+"/App_control/provide_category_details?parent_category="+catagory.getParent_category()+"&lang=en";
         progDailog.show();
         customAsynctask.getResultListenerFromAsynctaskForGet(url,new CustomAsynctask.onAPIResponse() {
             @Override

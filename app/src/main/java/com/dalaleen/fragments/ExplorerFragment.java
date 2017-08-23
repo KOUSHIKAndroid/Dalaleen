@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,14 +17,15 @@ import android.widget.RelativeLayout;
 import com.dalaleen.Activities.BaseActivity;
 import com.dalaleen.CustomView.LoadingImageView;
 import com.dalaleen.CustomView.LoadingTextView;
+import com.dalaleen.HTTP_HELPER.HTTP_Get;
 import com.dalaleen.Interface.CustomAsynctask;
+import com.dalaleen.Interface.DialogHelper;
 import com.dalaleen.Pojo.MyProperties;
 import com.dalaleen.R;
 import com.dalaleen.adapters.ExplorerFeaturePropertiesViewAdapter;
 import com.dalaleen.adapters.ExplorerHotPropertiesViewAdapter;
-import com.dalaleen.custome_front.EditTextLatoRegular;
 import com.dalaleen.custome_front.LatoRegular;
-import com.dalaleen.helper.ConstantClass;
+import com.dalaleen.helper.ApiConstant;
 import com.dalaleen.helper.NetworkConnection;
 import com.dalaleen.helper.UserDATAGetting;
 import com.dalaleen.logger.Logger;
@@ -56,8 +56,13 @@ public class ExplorerFragment extends Fragment implements View.OnClickListener{
 
     ImageView IMG_Up_Arrow;
     RelativeLayout RL_MAIN,RL_Edit_Main;
-    LinearLayout LL_TOP_1,LL_TOP_2;
-    LatoRegular TXT_MAIN_Category;
+    LinearLayout LL_TOP_1,LL_TOP_1_1,LL_TOP_2;
+
+    LatoRegular TXT_residential,TXT_RentType,TXT_PropertyType,TXT_Provinence,TXT_Neighbourhood;
+
+    JSONArray CategoryList,PropertyTypeDetailsList,ProvinenceList,NeighbourhoodList;
+
+
 
     @Nullable
     @Override
@@ -81,11 +86,21 @@ public class ExplorerFragment extends Fragment implements View.OnClickListener{
 
         LL_TOP_1=(LinearLayout)view.findViewById(R.id.LL_TOP_1);
         LL_TOP_1.setVisibility(View.GONE);
+        LL_TOP_1_1=(LinearLayout)view.findViewById(R.id.LL_TOP_1_1);
+        LL_TOP_1_1.setVisibility(View.GONE);
         LL_TOP_2=(LinearLayout)view.findViewById(R.id.LL_TOP_2);
         LL_TOP_2.setVisibility(View.GONE);
 
-        TXT_MAIN_Category=(LatoRegular)view.findViewById(R.id.TXT_MAIN_Category);
-        TXT_MAIN_Category.setOnClickListener(this);
+        TXT_residential=(LatoRegular)view.findViewById(R.id.TXT_residential);
+        TXT_RentType=(LatoRegular)view.findViewById(R.id.TXT_RentType);
+        TXT_PropertyType=(LatoRegular)view.findViewById(R.id.TXT_PropertyType);
+        TXT_Provinence=(LatoRegular)view.findViewById(R.id.TXT_Provinence);
+        TXT_Neighbourhood=(LatoRegular)view.findViewById(R.id.TXT_Neighbourhood);
+        TXT_residential.setOnClickListener(this);
+        TXT_RentType.setOnClickListener(this);
+        TXT_PropertyType.setOnClickListener(this);
+        TXT_Provinence.setOnClickListener(this);
+        TXT_Neighbourhood.setOnClickListener(this);
 
 
 
@@ -101,6 +116,55 @@ public class ExplorerFragment extends Fragment implements View.OnClickListener{
         REC_FEATURELIST=(RecyclerView)view.findViewById(R.id.REC_FEATURELIST);
         REC_HOTLIST.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
         REC_FEATURELIST.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+
+
+        new HTTP_Get(ApiConstant.CATEGORYLIST) {
+            @Override
+            protected void OnSucess(String Response) {
+                try {
+                    JSONObject jsonObject=new JSONObject(Response);
+                    CategoryList=jsonObject.getJSONArray("info");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            protected void OnErrorApi(String Error) {
+
+            }
+
+            @Override
+            protected void OnHttPError(String HttpError) {
+
+            }
+        };
+
+
+        new HTTP_Get(ApiConstant.CATEGORYLIST_PROVINENCE) {
+            @Override
+            protected void OnSucess(String Response) {
+                try {
+                    JSONObject jsonObject=new JSONObject(Response);
+                    ProvinenceList=jsonObject.getJSONArray("info");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            protected void OnErrorApi(String Error) {
+
+            }
+
+            @Override
+            protected void OnHttPError(String HttpError) {
+
+            }
+        };
+
+
+
 
 
 
@@ -131,7 +195,7 @@ public class ExplorerFragment extends Fragment implements View.OnClickListener{
 
     public void LoadHOTProperties(final int position) {
 
-        String URL=ConstantClass.BASE_URL+"/Jsonapp_control/hot_listing_property_list?lang=en&start_from="+position+"&per_page=5";
+        String URL= ApiConstant.BASE_URL+"/Jsonapp_control/hot_listing_property_list?lang=en&start_from="+position+"&per_page=5";
 
         new CustomAsynctask(getActivity(),new ProgressDialog(getActivity())).getResultListenerFromAsynctaskForGet(URL, new CustomAsynctask.onAPIResponse() {
             @Override
@@ -190,7 +254,7 @@ public class ExplorerFragment extends Fragment implements View.OnClickListener{
 
     public void LoadFEATUREProperties(final int position) {
 
-        String URL=ConstantClass.BASE_URL+"/jsonapp_control/feature_property_list?lang=en&start_from="+position+"&per_page=5";
+        String URL= ApiConstant.BASE_URL+"/jsonapp_control/feature_property_list?lang=en&start_from="+position+"&per_page=5";
         Logger.showInfo("@@ FEATURE",""+URL);
         new CustomAsynctask(getActivity(),new ProgressDialog(getActivity())).getResultListenerFromAsynctaskForGet(URL, new CustomAsynctask.onAPIResponse() {
             @Override
@@ -284,16 +348,143 @@ public class ExplorerFragment extends Fragment implements View.OnClickListener{
                 IMG_Up_Arrow.setVisibility(View.VISIBLE);
                 RL_MAIN.setVisibility(View.GONE);
                 RL_Edit_Main.setVisibility(View.VISIBLE);
+
                 LL_TOP_1.setVisibility(View.VISIBLE);
+                LL_TOP_1_1.setVisibility(View.VISIBLE);
                 LL_TOP_2.setVisibility(View.VISIBLE);
                 break;
             case R.id.IMG_Up_Arrow:
                 LL_TOP_2.setVisibility(View.GONE);
                 LL_TOP_1.setVisibility(View.GONE);
+                LL_TOP_1_1.setVisibility(View.GONE);
                 RL_Edit_Main.setVisibility(View.GONE);
                 RL_MAIN.setVisibility(View.VISIBLE);
                 IMG_Up_Arrow.setVisibility(View.GONE);
                 break;
+            case R.id.TXT_residential:
+
+                new DialogHelper(getActivity()).SelectSimpleList(CategoryList, "title_eng", new DialogHelper.ListItemClick() {
+                    @Override
+                    public void OnItemSelct(String data) {
+                        try {
+                            TXT_residential.setText(new JSONObject(data).getString("title_eng"));
+                            new HTTP_Get(ApiConstant.CATEGORYLIST_DETAILS+"parent_category="+new JSONObject(data).getString("category_id")) {
+                                @Override
+                                protected void OnSucess(String Response) {
+                                    try {
+                                        JSONObject jsonObject=new JSONObject(Response);
+                                        PropertyTypeDetailsList=jsonObject.getJSONArray("info");
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+
+                                @Override
+                                protected void OnErrorApi(String Error) {
+
+                                }
+
+                                @Override
+                                protected void OnHttPError(String HttpError) {
+
+                                }
+                            };
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void OnCancel() {
+
+                    }
+                });
+                break;
+
+            case R.id.TXT_RentType:
+                try {
+                 JSONArray   CategoryList_2=  new JSONArray("[{\"name\":\"All\"},{\"name\":\"Sell\"},{\"name\":\"Rent\"}]");
+                    new DialogHelper(getActivity()).SelectSimpleList(CategoryList_2, "name", new DialogHelper.ListItemClick() {
+                        @Override
+                        public void OnItemSelct(String data) {
+                            try {
+                                TXT_RentType.setText(new JSONObject(data).getString("name"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                        @Override
+                        public void OnCancel() {
+
+                        }
+                    });
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                break;
+
+            case R.id.TXT_PropertyType:
+                if(PropertyTypeDetailsList.length()>0)
+                new DialogHelper(getActivity()).SelectSimpleList(PropertyTypeDetailsList, "title_eng", new DialogHelper.ListItemClick() {
+                    @Override
+                    public void OnItemSelct(String data) {
+                        try {
+                            TXT_PropertyType.setText(new JSONObject(data).getString("title_eng"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void OnCancel() {
+
+                    }
+                });
+                break;
+            case R.id.TXT_Provinence:
+                if(ProvinenceList.length()>0)
+                    new DialogHelper(getActivity()).SelectSimpleList(ProvinenceList, "name", new DialogHelper.ListItemClick() {
+                        @Override
+                        public void OnItemSelct(String data) {
+                            try {
+                                TXT_Provinence.setText(new JSONObject(data).getString("name"));
+                                NeighbourhoodList=new JSONObject(data).getJSONArray("province_info_neighbourhood");
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                        @Override
+                        public void OnCancel() {
+
+                        }
+                    });
+                break;
+                case R.id.TXT_Neighbourhood:
+                if(NeighbourhoodList.length()>0)
+                    new DialogHelper(getActivity()).SelectSimpleList(NeighbourhoodList, "sub_province_name", new DialogHelper.ListItemClick() {
+                        @Override
+                        public void OnItemSelct(String data) {
+                            try {
+                                TXT_Neighbourhood.setText(new JSONObject(data).getString("sub_province_name"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                        @Override
+                        public void OnCancel() {
+
+                        }
+                    });
+                break;
+
+
+
+
         }
 
     }

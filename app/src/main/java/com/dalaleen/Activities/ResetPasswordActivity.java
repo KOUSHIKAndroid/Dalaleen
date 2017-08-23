@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 import com.dalaleen.R;
 import com.dalaleen.custome_front.LatoRegular;
-import com.dalaleen.helper.ConstantClass;
+import com.dalaleen.helper.ApiConstant;
 import com.dalaleen.helper.CustomAlert;
 import com.dalaleen.helper.CustomAlertForBackground;
 import com.dalaleen.Interface.CustomAsynctask;
@@ -68,7 +68,7 @@ public class ResetPasswordActivity extends AppCompatActivity implements MyCustom
                            else {
                                findViewById(R.id.error_confirm_password).setVisibility(View.GONE);
 
-                               String  url=""+ ConstantClass.BASE_URL+"/Jsonapp_control/resetpassword?otp_code="+edit_otp_no.getText().toString().trim()+"&password="+edit_new_password.getText().toString().trim()+"&lang=en";
+                               String  url=""+ ApiConstant.BASE_URL+"/Jsonapp_control/resetpassword?otp_code="+edit_otp_no.getText().toString().trim()+"&password="+edit_new_password.getText().toString().trim()+"&lang=en";
 
                                CustomAsynctask customAsynctask=new CustomAsynctask(ResetPasswordActivity.this,progDailog);
                                customAsynctask.getResultListenerFromAsynctaskForGet(url, new CustomAsynctask.onAPIResponse() {

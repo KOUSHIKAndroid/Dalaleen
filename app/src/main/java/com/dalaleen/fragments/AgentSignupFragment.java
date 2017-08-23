@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.dalaleen.Activities.LoginActivity;
 import com.dalaleen.R;
 import com.dalaleen.Activities.VerificationLoginActivity;
-import com.dalaleen.helper.ConstantClass;
+import com.dalaleen.helper.ApiConstant;
 import com.dalaleen.helper.CustomAlert;
 import com.dalaleen.Interface.CustomAsynctask;
 import com.dalaleen.helper.MyCustomAlertListener;
@@ -116,7 +116,7 @@ public class AgentSignupFragment extends Fragment implements MyCustomAlertListen
 
     private void SignUpAgent(){
 
-        String  url=""+ConstantClass.BASE_URL+ ConstantClass.Registration;
+        String  url=""+ ApiConstant.BASE_URL+ ApiConstant.Registration;
 
         CustomAsynctask customAsynctask=new CustomAsynctask(getActivity(),progDailog);
 

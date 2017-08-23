@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.dalaleen.R;
-import com.dalaleen.helper.ConstantClass;
+import com.dalaleen.helper.ApiConstant;
 import com.dalaleen.helper.CustomAlert;
 import com.dalaleen.Interface.CustomAsynctask;
 import com.dalaleen.helper.MyCustomAlertListener;
@@ -46,7 +46,7 @@ public class ForgetPasswordActivity extends AppCompatActivity implements MyCusto
                 } else {
                     findViewById(R.id.error_phone_no).setVisibility(View.GONE);
 
-                    String url = "" + ConstantClass.BASE_URL + "/Jsonapp_control/forgotpassword?phone=" + edit_phone_no.getText().toString() + "&lang=en";
+                    String url = "" + ApiConstant.BASE_URL + "/Jsonapp_control/forgotpassword?phone=" + edit_phone_no.getText().toString() + "&lang=en";
 
                     CustomAsynctask customAsynctask = new CustomAsynctask(ForgetPasswordActivity.this, progDailog);
                     customAsynctask.getResultListenerFromAsynctaskForGet(url, new CustomAsynctask.onAPIResponse() {

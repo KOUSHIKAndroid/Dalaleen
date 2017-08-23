@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -11,7 +12,7 @@ import android.widget.ImageView;
  * Created by apple on 27/04/17.
  */
 
-public class LoadingImageView extends ImageView {
+public class LoadingImageView extends AppCompatImageView {
     private boolean isLoading = false;
     private int width, height, x, y, rX, rY, rWidth, rHeight;
     private Paint loadingPaint;

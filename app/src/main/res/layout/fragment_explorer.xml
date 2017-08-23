@@ -81,6 +81,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:padding="7dp"
+                        android:visibility="gone"
                         android:src="@drawable/ic_location_on_sky_24dp" />
 
                 </RelativeLayout>
@@ -127,6 +128,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:padding="7dp"
+                        android:visibility="gone"
                         android:src="@drawable/ic_location_on_sky_24dp" />
 
                 </RelativeLayout>
@@ -143,15 +145,16 @@
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="5dp"
                         android:background="@drawable/rounded_edittext"
                         android:layout_height="40dp">
 
                         <com.dalaleen.custome_front.LatoRegular
-                            android:id="@+id/TXT_MAIN_Category"
+                            android:id="@+id/TXT_residential"
                             android:layout_width="match_parent"
                             android:hint="@string/catagory"
                             android:gravity="center"
+                            android:textSize="13sp"
                             android:text="Residential"
                             android:textColor="@color/white"
                             android:textColorHint="@color/tw__light_gray"
@@ -160,7 +163,7 @@
                             android:layout_width="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="5dp"
                             android:rotation="180"
                             android:src="@drawable/ic_keyboard_arrow_up_white"
                             android:layout_height="wrap_content" />
@@ -169,14 +172,16 @@
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:background="@drawable/rounded_edittext"
                         android:layout_height="40dp">
                         <com.dalaleen.custome_front.LatoRegular
+                            android:id="@+id/TXT_RentType"
                             android:layout_width="match_parent"
                             android:hint="@string/catagory"
                             android:gravity="center"
                             android:text="All"
+                            android:textSize="13sp"
                             android:textColor="@color/white"
                             android:textColorHint="@color/tw__light_gray"
                             android:layout_height="match_parent" />
@@ -184,7 +189,71 @@
                             android:layout_width="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="5dp"
+                            android:rotation="180"
+                            android:src="@drawable/ic_keyboard_arrow_up_white"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_TOP_1_1"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:layout_height="40dp">
+
+                        <com.dalaleen.custome_front.LatoRegular
+                            android:id="@+id/TXT_PropertyType"
+                            android:layout_width="match_parent"
+                            android:hint="@string/catagory"
+                            android:gravity="center"
+                            android:text="All"
+                            android:textSize="13sp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tw__light_gray"
+                            android:layout_height="match_parent" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:rotation="180"
+                            android:src="@drawable/ic_keyboard_arrow_up_white"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:layout_height="40dp">
+                        <com.dalaleen.custome_front.LatoRegular
+                            android:id="@+id/TXT_Provinence"
+                            android:layout_width="match_parent"
+                            android:hint="@string/catagory"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            android:text="Neighbourhood"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tw__light_gray"
+                            android:layout_height="match_parent" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
                             android:rotation="180"
                             android:src="@drawable/ic_keyboard_arrow_up_white"
                             android:layout_height="wrap_content" />
@@ -204,14 +273,16 @@
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="5dp"
                         android:background="@drawable/rounded_edittext"
                         android:layout_height="40dp">
                         <com.dalaleen.custome_front.LatoRegular
+                            android:id="@+id/TXT_Neighbourhood"
                             android:layout_width="match_parent"
                             android:hint="@string/catagory"
                             android:gravity="center"
                             android:text="All"
+                            android:textSize="13sp"
                             android:textColor="@color/white"
                             android:textColorHint="@color/tw__light_gray"
                             android:layout_height="match_parent" />
@@ -219,7 +290,7 @@
                             android:layout_width="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="5dp"
                             android:rotation="180"
                             android:src="@drawable/ic_keyboard_arrow_up_white"
                             android:layout_height="wrap_content" />

@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -15,8 +14,7 @@ import com.dalaleen.Pojo.MyProperties;
 import com.dalaleen.R;
 import com.dalaleen.adapters.MyPropertiesGridRecyclerViewAdapter;
 import com.dalaleen.adapters.MyPropertiesListRecyclerViewAdapter;
-import com.dalaleen.helper.ConstantClass;
-import com.dalaleen.helper.VerticalSpaceItemDecoration;
+import com.dalaleen.helper.ApiConstant;
 import com.dalaleen.logger.Logger;
 
 import org.json.JSONArray;
@@ -147,7 +145,7 @@ public class MyPropertiesActivity extends AppCompatActivity {
 
     public void getMypropertiesData(int startp) {
 
-        String URL = ConstantClass.BASE_URL + "/Jsonapp_control/user_my_property_list?user_id=" + 1 + "&lang=ar&start_from=" + startp + "&per_page=10";
+        String URL = ApiConstant.BASE_URL + "/Jsonapp_control/user_my_property_list?user_id=" + 1 + "&lang=ar&start_from=" + startp + "&per_page=10";
         customAsynctask.getResultListenerFromAsynctaskForGet(URL, new CustomAsynctask.onAPIResponse() {
             @Override
             public void onSuccess(String result) {

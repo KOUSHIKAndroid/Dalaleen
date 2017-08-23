@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.dalaleen.R;
 import com.dalaleen.application.ApplicationClass;
 import com.dalaleen.custome_front.LatoRegular;
-import com.dalaleen.helper.ConstantClass;
+import com.dalaleen.helper.ApiConstant;
 import com.dalaleen.helper.CustomAlert;
 import com.dalaleen.Interface.CustomAsynctask;
 import com.dalaleen.helper.MyCustomAlertListener;
@@ -66,7 +66,7 @@ public class VerificationLoginActivity extends AppCompatActivity implements MyCu
                 }else {
                     error_verify.setVisibility(View.GONE);
 
-                    String url=""+ ConstantClass.BASE_URL+ ConstantClass.Activation+"?activation_code="+edit_verify.getText().toString();
+                    String url=""+ ApiConstant.BASE_URL+ ApiConstant.Activation+"?activation_code="+edit_verify.getText().toString();
 
                     CustomAsynctask customAsynctask=new CustomAsynctask(VerificationLoginActivity.this,progDailog);
                     customAsynctask.getResultListenerFromAsynctaskForGet(url, new CustomAsynctask.onAPIResponse() {

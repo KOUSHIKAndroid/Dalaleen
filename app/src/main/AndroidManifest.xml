@@ -39,6 +39,7 @@
         <activity
             android:name=".Activities.SignupLogin"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustPan|adjustResize" />
         <activity
             android:name=".Activities.LoginActivity"
@@ -47,6 +48,7 @@
         <activity
             android:name=".Activities.SignupActivity"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".Activities.BaseActivity"
@@ -57,6 +59,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activities.VerificationLoginActivity"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
@@ -82,6 +85,7 @@
         <activity
             android:name=".Activities.ActivityDigitsVerification"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".Activities.MyFavoritesActivity"

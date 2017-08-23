@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import com.dalaleen.R;
 import com.dalaleen.application.ApplicationClass;
-import com.dalaleen.helper.ConstantClass;
+import com.dalaleen.helper.ApiConstant;
 import com.dalaleen.helper.CustomAlert;
 import com.dalaleen.helper.CustomAlertForBackground;
 import com.dalaleen.Interface.CustomAsynctask;
@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity implements MyCustomAlertLis
 
     private void loginDo(){
 
-        String  url=""+ConstantClass.BASE_URL+ ConstantClass.LOGIN;
+        String  url=""+ ApiConstant.BASE_URL+ ApiConstant.LOGIN;
 
         CustomAsynctask customAsynctask=new CustomAsynctask(LoginActivity.this,progDailog);
 
